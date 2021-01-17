@@ -1,0 +1,12 @@
+@media screen and (max-width: 767px) {
+  header .text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .text h1 {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
