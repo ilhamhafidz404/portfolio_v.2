@@ -1,6 +1,7 @@
 @import font.sass
 body
     background: linear-gradient(158.86deg, #1C2A34 10.36%, #111A20 49.58%, #111A20 49.58%);
+    @include Jost()
 a:hover
     text-decoration: none !important
 
@@ -42,6 +43,13 @@ header
             font-size: 38px
             color: #B0FBBC
             line-height: 142%
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+            span
+                -webkit-animation: glow 1s ease-in-out infinite alternate;
+                -moz-animation: glow 1s ease-in-out infinite alternate;
+                animation: glows 1s ease-in-out infinite alternate;
         p
             @include Jost()
             font-size: 18px
@@ -93,6 +101,196 @@ header
             &.freepik
                 &::before
                     background: linear-gradient(45deg, #5399ee 0%, #438fec 25%, #3689ee 50%, #1273eb 75%, #1273eb 100%);
+        
+.project
+    h2
+        color: #C9E2F0;
+        text-transform: uppercase
+        font-size: 30px
+        font-weight: 700
+        letter-spacing: 3px
+        text-align: center
+        display: block
+        margin: auto
+        &::after
+            content: ""
+            width: 200px
+            margin: auto
+            height: 5px
+            margin-top: 20px
+            background: linear-gradient(45deg, #CCA9F4 0%, #CCA9F4 25%, #81F59B 50%, #81F59B 75%, #D9534D 100%);
+            display: block
+            
+    .examp
+        background-color: #1C2C35
+        margin-top: 20px
+        border-left: 7px solid #CCA9F4
+        border-radius: 5px
+        padding: 20px
+        color: #ECF8FF;
+        p
+            color: #C9E2F0;
+            margin: 20px 0 50px 0
+        &.project2
+            border-left: 7px solid #81F59B
+        &.project3
+            border-left: 7px solid #D9534D
+        a
+            position: relative
+            transition: all .2s ease
+            color: #ECF8FF
+            font-weight: bold
+            z-index: 2
+            &:before
+                content: ""
+                position: absolute
+                bottom: -3px
+                left: -5px
+                display: block
+                border-radius: 28px
+                background: #CCA9F4 
+                width: 50%
+                height: 2px
+                transition: all .3s ease
+                z-index: -1
+            &:hover
+                &:before
+                    width: 100%
+                    height: 100%
+                    background:  #CCA9F4 
+            &.project2
+                &::before
+                    background: #81F59B
+            &.project3
+                &::before
+                    background: #D9534D
+            span
+                transition: all 400ms cubic-bezier(0.68, -0.1, 0.265, 1.55);
+            &:hover span
+                margin-left: 20px
+
+.skill
+    margin-top: 100px
+    background: #1C2C35;
+    padding: 50px
+    border-radius: 40px 20px 0 0
+    color: #ECF8FF;
+    position: relative
+    &::after
+        content: "MY SKILL"
+        position: absolute
+        font-size: 200px
+        font-weight: bold
+        bottom: -70px
+        left: -30px
+        white-space: nowrap
+        color: #111a20
+    h2
+        font-size: 40px
+        text-transform: uppercase
+        text-align: center
+        font-weight: 700
+        letter-spacing: 3px
+        margin-bottom: 50px
+        &::after
+            content: ""
+            display: block
+            width: 250px
+            // background: linear-gradient(45deg,  #e96228 0%, #30a6d3 25%, #c96195 50%,  #533b78 75%,  #f0d53b 100%);
+            background-color:  #affbbb
+            height: 5px
+            margin: auto
+            margin-top: 10px
+    p
+        text-align: center
+        p
+            display: inline-block
+            width: 300px
+    // .fa-circle
+    //     margin: 0 30px
+    //     font-size: 15px
+    //     &.html
+    //         margin-right: 20px
+    //     &.css
+    //         margin-right: 20px
+    //         margin-left: 70px
+    //     &.sass
+    //         margin-right: 58px
+    //         margin-left: 70px
+    //     &.js
+    //         margin-right: 78px
+    //         margin-left: 70px
+            
+    span
+        font-size: 50px
+        position: relative
+        z-index: 1
+        line-height: 140px
+        i
+            position: absolute
+            right: -40px
+            top: -20px
+            color: #78d1f0
+            z-index: -1
+            display: inline
+            font-size: 80px
+            animation: react 2s linear infinite;
+        &.html
+            i
+                left: -200px
+                top: 0px
+                color: #e96228
+                animation: none
+        &.css
+            i
+                right: -40px
+                top: 0px
+                color: #30a6d3
+                animation: none
+        &.sass
+            i
+                left: -40px
+                top: 10px
+                color: #c96195
+                animation: none
+        &.bootstrap
+            i
+                left: -350px
+                top: -10px
+                color: #533b78
+                animation: none
+        &.js
+            i
+                left: -200px
+                top: 20px
+                color: #f0d53b
+                animation: none
+        // &:hover
+        //     i
+        //         display: inline
+        //         transform: scale(1)
+
+
+
+
+
+
+
+@keyframes glow
+    from
+        text-shadow: 0px 0px 76px rgba(188, 251, 195, 0.3);
+    to
+        text-shadow: 0px 0px 76px rgba(188, 251, 195, 0.5);
+@keyframes glows
+    from
+        text-shadow: 0px 0px 76px rgba(188, 251, 195, 0.5);
+    to
+        text-shadow: 0px 0px 76px rgba(188, 251, 195, 0.8);
+@keyframes react
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(180deg)
 
 @import responsive.sass          
 

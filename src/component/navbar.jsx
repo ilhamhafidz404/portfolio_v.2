@@ -22,7 +22,7 @@ const Navigasi = (props) => {
 
   return (
     <nav>
-        <Navbar color="transparent" transparent expand="md">
+        <Navbar color="transparent" dark expand="md">
             <Container>
                 <NavbarBrand href="/"><img src="/asset/logo.png" alt=""/><span className="logo">Ilham Hafidz</span></NavbarBrand>
                 <NavbarToggler onClick={toggle} />

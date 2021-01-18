@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Navigasi from "./component/navbar";
 import Header from "./component/header";
-import Rellax from "./component/rellax";
+import Project from "./component/project";
+import Skill from "./component/skill";
 
 class App extends Component {
   render() {
@@ -9,7 +10,16 @@ class App extends Component {
       <div>
         <Navigasi />
         <Header />
-        <Rellax />
+        <Project />
+        <Skill />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       </div>
     );
   }
